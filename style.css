@@ -77,6 +77,6 @@ border:none;
 }
 
 button{
-background:#f59e0b;
+background: linear-gradient(to right, red, green, blue, pink);
 color:black;
 }
