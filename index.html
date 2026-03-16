@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Stockly</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Firebase -->
+<script type="module" src="firebase.js"></script>
+<script type="module" src="app.js"></script>
+</head>
+
+<body>
+
+<div id="loginScreen" class="centerBox">
+<h1>Stockly</h1>
+<input id="user" placeholder="Usuário">
+<input id="pass" type="password" placeholder="Senha">
+<button onclick="login()">Entrar</button>
+<p id="loginMsg"></p>
+</div>
+
+<div id="app" style="display:none">
+
+<header>
+<h1>Stockly</h1>
+</header>
+
+<nav>
+<button onclick="showTab('dashboard')">Dashboard</button>
+<button onclick="showTab('producao')">Registrar Produção</button>
+<button onclick="showTab('venda')">Registrar Venda</button>
+<button onclick="showTab('estoque')">Estoque</button>
+<button onclick="showTab('historico')">Histórico</button>
+</nav>
+
+<section id="dashboard" class="tab">
+<h2>Dashboard</h2>
+<div class="cards">
+<div class="card">
+<h3>Total Produzido</h3>
+<p id="totalProduzido">0</p>
+</div>
+<div class="card">
+<h3>Total Vendido</h3>
+<p id="totalVendido">0</p>
+</div>
+</div>
+<canvas id="grafico"></canvas>
+</section>
+
+<section id="producao" class="tab">
+<h2>Registrar Produção</h2>
+
+<select id="produtoProducao">
+<option>Tradicional</option>
+<option>Diet</option>
+<option>Canela</option>
+</select>
+
+<input id="quantidadeProducao" type="number" placeholder="Quantidade">
+
+<button onclick="registrarProducao()">Registrar Produção</button>
+</section>
+
+<section id="venda" class="tab">
+<h2>Registrar Venda</h2>
+
+<select id="produtoVenda">
+<option>Tradicional</option>
+<option>Diet</option>
+<option>Canela</option>
+</select>
+
+<input id="quantidadeVenda" type="number" placeholder="Quantidade">
+
+<button onclick="registrarVenda()">Registrar Venda</button>
+</section>
+
+<section id="estoque" class="tab">
+<h2>Estoque Atual</h2>
+<table>
+<tr><th>Produto</th><th>Quantidade</th></tr>
+<tr><td>Tradicional</td><td id="eTrad">0</td></tr>
+<tr><td>Diet</td><td id="eDiet">0</td></tr>
+<tr><td>Canela</td><td id="eCanela">0</td></tr>
+</table>
+</section>
+
+<section id="historico" class="tab">
+<h2>Histórico de Vendas</h2>
+<table>
+<tr><th>Produto</th><th>Quantidade</th><th>Data</th></tr>
+<tbody id="historicoTabela"></tbody>
+</table>
+</section>
+
+</div>
+
+</body>
+</html>
