@@ -3,12 +3,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
-apiKey: "COLE_SUA_API_KEY",
-authDomain: "SEU_PROJETO.firebaseapp.com",
-projectId: "SEU_PROJETO",
-storageBucket: "SEU_PROJETO.appspot.com",
-messagingSenderId: "XXXX",
-appId: "XXXX"
+apiKey: "AIzaSyCePoVqVJakkxhtYbyBybu1ErPZXUUyibs",
+authDomain: "stocky-53f07.firebaseapp.com",
+projectId: "stocky-53f07",
+storageBucket: "stocky-53f07.firebasestorage.app",
+messagingSenderId: "904523452324",
+appId: "1:904523452324:web:5b44b780b55f5f265a7b31"
 };
 
 export const app = initializeApp(firebaseConfig);
